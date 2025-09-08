@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="CSS/estiloIndex.css">
+</head>
+<body>
+    <div id="encabezado">
+        <img src="assets/logo/logo.png">
+        <h1>El lector curioso</h1>
+    </div>
+
+    <div id="contenedor_principal">
+        <div id="botones_principales">
+            <h2> ¡Bienvenido! <br> Registra tu entrada</h2>
+
+            <input class="btn_estilo" type="button" value="Empleado" id="btn_empleado" onclick="mostrar_registro_empleado()">
+            <input class="btn_estilo" type="button" value="Visitante" id="btn_visitante" onclick="mostrar_registro_visitante()" >
+        </div>
+        <div id="texto_bienvenida">
+            <h2>¡Bienvenido! <br> Disfruta tu visita</h2>
+        </div>
+
+        <div id="formato_registro_empleado">
+            <form id="formEmpleado">
+                <label class="estilo_label" for="numero_empleado">Número de empleado</label><br>
+                <input  type="text" name="numero_empleado" class="estilo_input" required> <br>
+            
+                <button class="btn_estilo" type="submit" id="btn_empleado_registro">Entrar</button>
+                
+            </form>
+            <input class="btn_estilo btn_salir" type="button" value="Salir" id="btn_salir_empleado">
+
+        </div>
+
+        <div id="formato_registro">
+            <form id="formVisitante">
+                <div>
+                    <label class="estilo_label" for="nombre">Nombre:</label><br>
+                    <input  type="text" name="nombre" class="estilo_input" required> <br>
+                </div>
+
+                <div>
+                    <label class="estilo_label" for="motivo">Motivo:</label><br>
+                    <input type="text" name="motivo" class="estilo_input" required><br>
+                </div>
+                <div id="info_lugar">
+                    <div> 
+                        <label for="piso">Piso</label> 
+                        <input type="text" name="piso" class="estilo_input_2" required>
+                    </div>
+
+                    <div>
+                        <label for="oficina">Oficina</label>
+                        <input type="text" name="oficina" class="estilo_input_2" required>
+                    </div>
+                </div>
+
+                <button class="btn_estilo" type="submit" id="btn_registrar">Registrar</button>
+            </form>
+
+            <input class="btn_estilo " type="button" value="Salir" id="btn_salir_visitante">
+        </div>
+
+
+        <div id="pase_entrada">
+            <div id="codigo_registro">
+                <img src="assets/logo/logo.png" width="100%" alt="">
+            </div>
+
+            <div id="datos_visitantes">
+                <p id="dato_nombre" class="estilo_dato">Nombre</p>
+                <p id="dato_motivo" class="estilo_dato">Puesto</p>
+                
+                <div id="datos_lugar">
+                    <p id="dato_piso" class="estilo_dato">Piso</p>
+                    <p id="dato_local" class="estilo_dato">Local</p>
+                </div>
+
+                <form id="formSalida">
+                    <input type="hidden" name="id" id="registro_id">
+                    <button type="submit" class="btn_estilo" id="btn_estilo_salir">Salir</button>
+                </form>
+            </div>
+
+        
+        </div>
+
+    </div>
+</body>
+
+<script src="JS/registro.js"></script>
+</html>
